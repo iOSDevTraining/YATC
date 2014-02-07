@@ -12,6 +12,7 @@ Who needs specs when a simple screen shot will suffice? Just build this:
 SCREENSHOT: https://www.dropbox.com/s/t2mhaohplqv6zh9/Screenshot%202014-02-06%2016.46.12.png
 
 Well, OK, here are a few requirements:
+
 1. The main screen should be a table view with the most recent 100 tweets from your home timeline.
 2. Each cell should have (a) the Twitter username and (b) the tweet text.
 3. You should be able to see at least four lines of tweet text in each cell.
@@ -23,6 +24,7 @@ Well, OK, here are a few requirements:
 
 ## How To Participate
 Here's how this works...
+
 1. Fork this repository (https://github.com/iOSDevTraining/...)
 2. Clone your fork to your computer.
 3. Create the project in your cloned directory.
