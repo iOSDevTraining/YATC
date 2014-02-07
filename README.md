@@ -33,3 +33,6 @@ Here's how this works...
 6. Build build build until the app works per the specs.
 7. When you have the app working per the specs and you're ready for us to review and critique, create a Pull Request on GitHub. This is the way for you to signal to tell us "hey, I think I'm done" and gives us an easy way to comment on individual lines in your files as well as on your app as a whole.
 8. [Send us an email](iosdevtraining@roadfiresoftware.com) to let us know you're ready for us to review your code. Include a link to the pull request.
+
+## About
+This is an [iOS Dev Training](http://iosdevtraining.com/) project by Josh Brown and Randy Edmonds.
