@@ -9,7 +9,7 @@ Well...why not? There are lots of great Twitter clients out there for iOS, like 
 ## Specs
 Who needs specs when a simple screen shot will suffice? Just build this:
 
-SCREENSHOT: https://www.dropbox.com/s/t2mhaohplqv6zh9/Screenshot%202014-02-06%2016.46.12.png
+![YATC screenshot](screenshot.png)
 
 Well, OK, here are a few requirements:
 
@@ -25,7 +25,7 @@ Well, OK, here are a few requirements:
 ## How To Participate
 Here's how this works...
 
-1. Fork this repository (https://github.com/iOSDevTraining/...)
+1. Fork this repository ([https://github.com/iOSDevTraining/YATC](https://github.com/iOSDevTraining/YATC))
 2. Clone your fork to your computer.
 3. Create the project in your cloned directory.
 4. As you're building, make commits and push your code to GitHub (just like you normally do).
