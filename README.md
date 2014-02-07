@@ -1,4 +1,4 @@
-# Coding Challenge: YATC (Yet Another Twitter Client)
+Coding Challenge: YATC (Yet Another Twitter Client)
 ====
 
 YATC (pronounced "yat-see", rhymes with "cat pee") is Yet Another Twitter Client, and it doesn't exist yet! Your mission, should you choose to accept it... is to build it.
