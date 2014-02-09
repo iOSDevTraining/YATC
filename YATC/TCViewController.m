@@ -56,9 +56,7 @@
                  [self.accountStore accountsWithAccountType:twitterAccountType];
                  NSURL *url = [NSURL URLWithString:@"https://api.twitter.com"
                                @"/1.1/statuses/home_timeline.json"];
-                 NSDictionary *params = @{@"include_rts" : @"0",
-                                          @"trim_user" : @"1",
-                                          @"count" : @"100"};
+                 NSDictionary *params = @{@"count" : @"100", @"include_entities": @"false"};
                  SLRequest *request =
                  [SLRequest requestForServiceType:SLServiceTypeTwitter
                                     requestMethod:SLRequestMethodGET
@@ -76,12 +74,16 @@
                           if (urlResponse.statusCode >= 200 &&
                               urlResponse.statusCode < 300) {
                               NSError *jsonError;
-                              NSDictionary *timelineData =
+                              NSArray *timelineData =
                               [NSJSONSerialization
                                JSONObjectWithData:responseData
                                options:NSJSONReadingAllowFragments error:&jsonError];
                               if (timelineData) {
-                                  NSLog(@"Timeline Response: %@\n", timelineData);
+                                  self.entries = timelineData;
+                                  NSLog(@"got %ld", (long)(timelineData.count));
+                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                      [self.tableView reloadData];
+                                  });
                               }
                               else {
                                   // Our JSON deserialization went awry
@@ -90,8 +92,8 @@
                           }
                           else {
                               // The server did not respond ... were we rate-limited?
-                              NSLog(@"The response status code is %d",
-                                    urlResponse.statusCode);
+                              NSLog(@"The response status code is %ld",
+                                    (long)(urlResponse.statusCode));
                           }
                       }
                   }];
@@ -119,6 +121,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NSDictionary* tweet = self.entries[indexPath.row];
+    
+    cell.textLabel.text = tweet[@"user"][@"screen_name"];
+    cell.detailTextLabel.text = tweet[@"text"];
     return cell;
 }
 
