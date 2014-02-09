@@ -21,6 +21,7 @@
 		16736E8818A81FE600404622 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16736E6A18A81FE600404622 /* UIKit.framework */; };
 		16736E9018A81FE600404622 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16736E8E18A81FE600404622 /* InfoPlist.strings */; };
 		16736E9218A81FE600404622 /* YATCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16736E9118A81FE600404622 /* YATCTests.m */; };
+		16736E9C18A82D0A00404622 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16736E9B18A82D0A00404622 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		16736E8D18A81FE600404622 /* YATCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YATCTests-Info.plist"; sourceTree = "<group>"; };
 		16736E8F18A81FE600404622 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16736E9118A81FE600404622 /* YATCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATCTests.m; sourceTree = "<group>"; };
+		16736E9B18A82D0A00404622 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16736E9C18A82D0A00404622 /* Social.framework in Frameworks */,
 				16736E6918A81FE600404622 /* CoreGraphics.framework in Frameworks */,
 				16736E6B18A81FE600404622 /* UIKit.framework in Frameworks */,
 				16736E6718A81FE600404622 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		16736E6518A81FE600404622 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16736E9B18A82D0A00404622 /* Social.framework */,
 				16736E6618A81FE600404622 /* Foundation.framework */,
 				16736E6818A81FE600404622 /* CoreGraphics.framework */,
 				16736E6A18A81FE600404622 /* UIKit.framework */,
@@ -461,6 +465,7 @@
 				16736E9718A81FE600404622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16736E9818A81FE600404622 /* Build configuration list for PBXNativeTarget "YATCTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +474,7 @@
 				16736E9A18A81FE600404622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
