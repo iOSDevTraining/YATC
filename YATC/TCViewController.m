@@ -31,14 +31,26 @@
 {
     [super viewDidLoad];
     self.entries = @[];
+    _accountStore = [[ACAccountStore alloc] init];
     [self fetchTimelineForUser];
+    [self setupRefreshControl];
+}
+
+- (void) setupRefreshControl
+{
+    // HACK: If I just use `self.refreshControl` here, a wacky blank cell
+    // remains at the top of the TableView after refresh.
+    // Using a brand-new UIRefreshControl eliminates this bug.
+    UIRefreshControl *refreshControl = [UIRefreshControl new];
+    [refreshControl addTarget:self action:@selector(fetchTimelineForUser)
+             forControlEvents:UIControlEventValueChanged];
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating data…"];
+
+    [self setRefreshControl:refreshControl];
 }
 
 - (void)fetchTimelineForUser
 {
-    if (!self.accountStore) {
-        _accountStore = [[ACAccountStore alloc] init];
-    }
     //  Step 0: Check that the user has local Twitter accounts
     if ([self userHasAccessToTwitter]) {
         //  Step 1:  Obtain access to the user's Twitter accounts
@@ -83,6 +95,7 @@
                                   NSLog(@"got %ld", (long)(timelineData.count));
                                   dispatch_async(dispatch_get_main_queue(), ^{
                                       [self.tableView reloadData];
+                                      [self.refreshControl endRefreshing];
                                   });
                               }
                               else {

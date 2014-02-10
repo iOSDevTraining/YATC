@@ -40,6 +40,9 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="YATC" id="nkI-LR-be3"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="dV9-nf-p6P">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaf-dh-goj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
