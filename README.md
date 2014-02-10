@@ -1,7 +1,7 @@
 Coding Challenge: YATC (Yet Another Twitter Client)
 ====
 
-YATC (pronounced "yat-see", rhymes with "cat pee") is Yet Another Twitter Client, and it doesn't exist yet! Your mission, should you choose to accept it... is to build it.
+YATC (pronounced "yat-see") is Yet Another Twitter Client, and it doesn't exist yet! Your mission, should you choose to accept it... is to build it.
 
 ## Why Another Twitter Client?
 Well...why not? There are lots of great Twitter clients out there for iOS, like Twitterrific, TweetBot, and even the official Twitter app. And there are literally dozens (hundreds?) of others. So why not jump on the bandwagon and build your own? You'll get to pull JSON from an API, parse it, and display it in a table view - all things you'd likely do in a real app you build for yourself, your company, or your client. And let's not forget that building a Twitter client gives us the unique opportunity to use the one and only **pull-to-refresh** control!
