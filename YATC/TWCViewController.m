@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
     self.entries = @[];
-    _accountStore = [[ACAccountStore alloc] init];
+    _accountStore = [ACAccountStore new];
     [self fetchTimelineForUser];
     [self setupRefreshControl];
 }
@@ -46,7 +46,7 @@
              forControlEvents:UIControlEventValueChanged];
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Updating data…"];
 
-    [self setRefreshControl:refreshControl];
+    self.refreshControl = refreshControl;
 }
 
 - (void)fetchTimelineForUser
