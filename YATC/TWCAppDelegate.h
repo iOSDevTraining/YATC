@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Jacob Krall. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface TWCAppDelegate : UIResponder <UIApplicationDelegate>
 
