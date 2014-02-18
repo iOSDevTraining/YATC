@@ -1,14 +1,14 @@
 //
-//  TCAppDelegate.m
+//  TWCAppDelegate.m
 //  YATC
 //
 //  Created by Jacob Krall on 2/9/14.
 //  Copyright (c) 2014 Jacob Krall. All rights reserved.
 //
 
-#import "TCAppDelegate.h"
+#import "TWCAppDelegate.h"
 
-@implementation TCAppDelegate
+@implementation TWCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

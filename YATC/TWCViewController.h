@@ -1,5 +1,5 @@
 //
-//  TCViewController.h
+//  TWCViewController.h
 //  YATC
 //
 //  Created by Jacob Krall on 2/9/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TCViewController : UITableViewController
+@interface TWCViewController : UITableViewController
 
 @end

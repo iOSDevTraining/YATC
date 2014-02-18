@@ -12,9 +12,9 @@
 		16736E6B18A81FE600404622 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16736E6A18A81FE600404622 /* UIKit.framework */; };
 		16736E7118A81FE600404622 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16736E6F18A81FE600404622 /* InfoPlist.strings */; };
 		16736E7318A81FE600404622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16736E7218A81FE600404622 /* main.m */; };
-		16736E7718A81FE600404622 /* TCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16736E7618A81FE600404622 /* TCAppDelegate.m */; };
+		16736E7718A81FE600404622 /* TWCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16736E7618A81FE600404622 /* TWCAppDelegate.m */; };
 		16736E7A18A81FE600404622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16736E7818A81FE600404622 /* Main.storyboard */; };
-		16736E7D18A81FE600404622 /* TCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16736E7C18A81FE600404622 /* TCViewController.m */; };
+		16736E7D18A81FE600404622 /* TWCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16736E7C18A81FE600404622 /* TWCViewController.m */; };
 		16736E7F18A81FE600404622 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16736E7E18A81FE600404622 /* Images.xcassets */; };
 		16736E8618A81FE600404622 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16736E8518A81FE600404622 /* XCTest.framework */; };
 		16736E8718A81FE600404622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16736E6618A81FE600404622 /* Foundation.framework */; };
@@ -43,11 +43,11 @@
 		16736E7018A81FE600404622 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16736E7218A81FE600404622 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16736E7418A81FE600404622 /* YATC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YATC-Prefix.pch"; sourceTree = "<group>"; };
-		16736E7518A81FE600404622 /* TCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
-		16736E7618A81FE600404622 /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
+		16736E7518A81FE600404622 /* TWCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCAppDelegate.h; sourceTree = "<group>"; };
+		16736E7618A81FE600404622 /* TWCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWCAppDelegate.m; sourceTree = "<group>"; };
 		16736E7918A81FE600404622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		16736E7B18A81FE600404622 /* TCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewController.h; sourceTree = "<group>"; };
-		16736E7C18A81FE600404622 /* TCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewController.m; sourceTree = "<group>"; };
+		16736E7B18A81FE600404622 /* TWCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWCViewController.h; sourceTree = "<group>"; };
+		16736E7C18A81FE600404622 /* TWCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWCViewController.m; sourceTree = "<group>"; };
 		16736E7E18A81FE600404622 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		16736E8418A81FE600404622 /* YATCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YATCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16736E8518A81FE600404622 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -116,11 +116,11 @@
 		16736E6C18A81FE600404622 /* YATC */ = {
 			isa = PBXGroup;
 			children = (
-				16736E7518A81FE600404622 /* TCAppDelegate.h */,
-				16736E7618A81FE600404622 /* TCAppDelegate.m */,
+				16736E7518A81FE600404622 /* TWCAppDelegate.h */,
+				16736E7618A81FE600404622 /* TWCAppDelegate.m */,
 				16736E7818A81FE600404622 /* Main.storyboard */,
-				16736E7B18A81FE600404622 /* TCViewController.h */,
-				16736E7C18A81FE600404622 /* TCViewController.m */,
+				16736E7B18A81FE600404622 /* TWCViewController.h */,
+				16736E7C18A81FE600404622 /* TWCViewController.m */,
 				16736E7E18A81FE600404622 /* Images.xcassets */,
 				16736E6D18A81FE600404622 /* Supporting Files */,
 			);
@@ -200,7 +200,7 @@
 		16736E5B18A81FE600404622 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = TC;
+				CLASSPREFIX = TWC;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jacob Krall";
 				TargetAttributes = {
@@ -254,9 +254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16736E7D18A81FE600404622 /* TCViewController.m in Sources */,
+				16736E7D18A81FE600404622 /* TWCViewController.m in Sources */,
 				16736E7318A81FE600404622 /* main.m in Sources */,
-				16736E7718A81FE600404622 /* TCAppDelegate.m in Sources */,
+				16736E7718A81FE600404622 /* TWCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

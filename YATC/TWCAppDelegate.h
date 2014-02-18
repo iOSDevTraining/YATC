@@ -1,5 +1,5 @@
 //
-//  TCAppDelegate.h
+//  TWCAppDelegate.h
 //  YATC
 //
 //  Created by Jacob Krall on 2/9/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TCAppDelegate : UIResponder <UIApplicationDelegate>
+@interface TWCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

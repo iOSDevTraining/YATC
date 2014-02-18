@@ -1,5 +1,5 @@
 //
-//  TCViewController.m
+//  TWCViewController.m
 //  YATC
 //
 //  Created by Jacob Krall on 2/9/14.
@@ -8,9 +8,9 @@
 
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
-#import "TCViewController.h"
+#import "TWCViewController.h"
 
-@interface TCViewController ()
+@interface TWCViewController ()
 
 @property NSArray *entries;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation TCViewController
+@implementation TWCViewController
 
 - (BOOL)userHasAccessToTwitter
 {

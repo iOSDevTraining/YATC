@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TCAppDelegate.h"
+#import "TWCAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TCAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TWCAppDelegate class]));
     }
 }
