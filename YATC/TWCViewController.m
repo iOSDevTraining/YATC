@@ -133,7 +133,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell = [tableView
+                             dequeueReusableCellWithIdentifier:@"cell"
+                             forIndexPath:indexPath];
     NSDictionary* tweet = self.entries[indexPath.row];
     
     cell.textLabel.text = tweet[@"user"][@"screen_name"];
