@@ -30,10 +30,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.entries = @[];
-    _accountStore = [ACAccountStore new];
+
     [self fetchTimelineForUser];
     [self setupRefreshControl];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if(self = [super initWithCoder:aDecoder])
+    {
+        self.entries = @[];
+        self.accountStore = [ACAccountStore new];
+    }
+
+    return self;
 }
 
 - (void) setupRefreshControl
