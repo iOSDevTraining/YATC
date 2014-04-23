@@ -32,12 +32,10 @@
         [self twitterHome];
     }
     
-    UIImage *image = [UIImage imageNamed:@"newTweetSmall"];
-//    UIImage *image = [UIImage imageWithContentsOfFile:@"newTweetSmall"];
+    UIImage *image = [UIImage imageNamed:@"newTweetTwitterific"];
     // [image resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 40, 80) resizingMode:UIImageResizingModeStretch];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleBordered target:self action:@selector(newTweet)];
     
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(newTweet)];
     
     // uncomment these lines if you want the profile view on the top of the tweets
 //    NSBundle *appBundle = [NSBundle mainBundle];

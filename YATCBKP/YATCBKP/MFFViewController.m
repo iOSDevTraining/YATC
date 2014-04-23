@@ -103,6 +103,10 @@
     cell.name.text = [tweet valueForKeyPath:@"user.name"];
     cell.username.text = [tweet valueForKeyPath:@"user.screen_name"];
     cell.tweet.text = tweet[@"text"];
+    // following 2 lines are supposed to make the text start at top left
+    cell.tweet.numberOfLines = 0;
+    [cell.tweet sizeToFit];
+    
     // image takes a bit more
     NSString *profileImageURL = [tweet valueForKeyPath:@"user.profile_image_url"];
     NSURL *imageUrl = [[NSURL alloc] initWithString:profileImageURL];

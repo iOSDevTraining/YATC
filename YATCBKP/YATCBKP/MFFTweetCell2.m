@@ -15,9 +15,12 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // configure controls
-        self.tweet = [[UILabel alloc] initWithFrame:CGRectMake(60, 15, 200, 25)];
+        self.tweet = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 280, 35)];
         self.tweet.textColor = [UIColor blackColor];
         self.tweet.font = [UIFont fontWithName:@"Arial" size:12.0f];
+        
+//        self.tweet.numberOfLines = 0;
+//        [self.tweet sizeToFit];
         
         [self addSubview:self.tweet];
     }

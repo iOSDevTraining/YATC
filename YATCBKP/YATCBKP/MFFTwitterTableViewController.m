@@ -133,13 +133,11 @@
 {
     static NSString *cellIdentifier = @"TwitterCell";
     
-    // Similar to UITableViewCell, but
     MFFTweetCell2 *cell = (MFFTweetCell2 *)[theTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[MFFTweetCell2 alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    // MFFTweetCell *cell = (MFFTweetCell *) [self.tableView dequeueReusableCellWithIdentifier:@"TwitterCell"];
     NSDictionary *tweet = _array[indexPath.row];
     cell.name.text = [tweet valueForKeyPath:@"user.name"];
     cell.username.text = [tweet valueForKeyPath:@"user.screen_name"];
@@ -149,10 +147,7 @@
     // NSURL *imageUrl = [[NSURL alloc] initWithString:profileImageURL];
     // UIImage *profileImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
     // cell.profileImageView.image = profileImage;
-
-    // Just want to test, so I hardcode the data
-    //cell.tweet.text = @"Testing";
-    
+ 
     return cell;
 }
 
