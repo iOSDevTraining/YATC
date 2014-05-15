@@ -90,7 +90,7 @@
                                                                     error:&error];
                      if (self.array.count != 0) {
                          dispatch_async(dispatch_get_main_queue(), ^{
-                             NSDictionary *firstTweet = _array[0];
+                             NSDictionary *firstTweet = self.array[0];
                              NSLog(@"first Tweet : %@", firstTweet[@"text"]);
                              [tableView reloadData];
                          });
@@ -104,16 +104,6 @@
      }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - UITableViewDataSource
 // number of section(s), now I assume there is only 1 section
@@ -125,7 +115,7 @@
 // number of row in the section, I assume there is only 1 row
 - (NSInteger)tableView:(UITableView *)theTableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_array count];
+    return [self.array count];
 }
 
 // the cell will be returned to the tableView
@@ -138,16 +128,11 @@
         cell = [[MFFTweetCell2 alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    NSDictionary *tweet = _array[indexPath.row];
+    NSDictionary *tweet = self.array[indexPath.row];
     cell.name.text = [tweet valueForKeyPath:@"user.name"];
     cell.username.text = [tweet valueForKeyPath:@"user.screen_name"];
     cell.tweet.text = tweet[@"text"];
-    // image takes a bit more
-    // NSString *profileImageURL = [tweet valueForKeyPath:@"user.profile_image_url"];
-    // NSURL *imageUrl = [[NSURL alloc] initWithString:profileImageURL];
-    // UIImage *profileImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
-    // cell.profileImageView.image = profileImage;
- 
+
     return cell;
 }
 

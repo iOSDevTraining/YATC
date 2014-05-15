@@ -1,6 +1,7 @@
 //
 //  MFFProfileView.h
-//  TwitterTimeline
+//
+//  Original intent was for this to be a reusable view component on top of a table
 //
 //  Created by Brian Preston on 4/14/14.
 //  Copyright (c) 2014 MobileFunForge. All rights reserved.

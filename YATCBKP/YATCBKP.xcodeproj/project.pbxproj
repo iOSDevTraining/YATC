@@ -509,6 +509,7 @@
 				67A385421906A1080038CA61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67A385431906A1080038CA61 /* Build configuration list for PBXNativeTarget "YATCBKPTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +518,7 @@
 				67A385451906A1080038CA61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

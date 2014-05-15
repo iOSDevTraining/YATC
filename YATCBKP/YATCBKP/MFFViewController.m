@@ -83,23 +83,13 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Returns the number of rows for the table view using the array instance variable
-    return [_array count];
+    return [self.array count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    // Creates each cell for the table view
-//    static NSString *cellID = @"CELLID";
-//    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID];
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-//    }
-//    // Creates an NSDictionary that holds the user's posts and then loads the data into each cellof the table's view
-//    NSDictionary *tweet = _array[indexPath.row];
-//    cell.textLabel.text = tweet[@"text"];
-//    return cell;
     
     MFFTweetCell *cell = (MFFTweetCell *) [self.tableView dequeueReusableCellWithIdentifier:@"TwitterCell"];
-    NSDictionary *tweet = _array[indexPath.row];
+    NSDictionary *tweet = self.array[indexPath.row];
     cell.name.text = [tweet valueForKeyPath:@"user.name"];
     cell.username.text = [tweet valueForKeyPath:@"user.screen_name"];
     cell.tweet.text = tweet[@"text"];

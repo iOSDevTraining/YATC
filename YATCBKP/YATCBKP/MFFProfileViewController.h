@@ -1,6 +1,7 @@
 //
 //  MFFProfileViewController.h
-//  TwitterTimeline
+//
+
 //
 //  Created by Brian Preston on 4/7/14.
 //  Copyright (c) 2014 MobileFunForge. All rights reserved.

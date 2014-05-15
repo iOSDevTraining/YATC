@@ -26,7 +26,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    if(_userId) {
+    if(self.userId) {
         [self twitterUserProfile];
     } else {
         [self twitterHome];
@@ -116,8 +116,8 @@
                  // the requestAPI requires us to tell it how much data to return so we use a NSDictionary to set the count
                  NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
                  [parameters setObject:@"100" forKey:@"count"];
-                 if (_userId) {
-                     [parameters setObject:_userId forKey:@"user_id"];
+                 if (self.userId) {
+                     [parameters setObject:self.userId forKey:@"user_id"];
                      requestAPI = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/user_timeline.json"];
                  } else {
                      requestAPI = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json"];
@@ -134,7 +134,7 @@
                                                                     error:&error];
                      if (self.array.count != 0) {
                          dispatch_async(dispatch_get_main_queue(), ^{
-                             NSDictionary *firstTweet = _array[0];
+                             NSDictionary *firstTweet = self.array[0];
                              NSLog(@"first Tweet : %@", firstTweet[@"text"]);
                              [self.tableView reloadData];
                          });
@@ -172,7 +172,7 @@
                  NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
                  [parameters setObject:@"100" forKey:@"count"];
                  
-                 // [parameters setObject:_userId forKey:@"user_id"];
+                 // [parameters setObject:self.userId forKey:@"user_id"];
                  [parameters setObject:_screenName forKey:@"screen_name"];
                  
                  // this is where we are getting the data using SLRequest
@@ -186,7 +186,7 @@
                                                                     error:&error];
                      if (self.array.count != 0) {
                          dispatch_async(dispatch_get_main_queue(), ^{
-                             NSDictionary *firstTweet = _array[0];
+                             NSDictionary *firstTweet = self.array[0];
                              NSLog(@"first Tweet : %@", firstTweet[@"text"]);
                              [self.tableView reloadData];
                          });
@@ -204,23 +204,12 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Returns the number of rows for the table view using the array instance variable
-    return [_array count];
+    return [self.array count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    // Creates each cell for the table view
-    //    static NSString *cellID = @"CELLID";
-    //    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID];
-    //    if (cell == nil) {
-    //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    //    }
-    //    // Creates an NSDictionary that holds the user's posts and then loads the data into each cellof the table's view
-    //    NSDictionary *tweet = _array[indexPath.row];
-    //    cell.textLabel.text = tweet[@"text"];
-    //    return cell;
-    
     MFFTweetCell *cell = (MFFTweetCell *) [self.tableView dequeueReusableCellWithIdentifier:@"TwitterCell"];
-    NSDictionary *tweet = _array[indexPath.row];
+    NSDictionary *tweet = self.array[indexPath.row];
     cell.name.text = [tweet valueForKeyPath:@"user.name"];
     
     UIFontDescriptor *bodyFontDesciptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleBody];
@@ -275,7 +264,7 @@
     // when a user selects a row this will de-select the row
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSDictionary *tweet = _array[indexPath.row];
+    NSDictionary *tweet = self.array[indexPath.row];
     NSNumber *userId = [tweet valueForKeyPath:@"user.id"];
     NSString *userName = [tweet valueForKeyPath:@"user.screen_name"];
     NSLog(@"trying to get tweets for %@", userName);

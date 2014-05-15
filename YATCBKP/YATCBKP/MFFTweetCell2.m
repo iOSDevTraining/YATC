@@ -19,9 +19,6 @@
         self.tweet.textColor = [UIColor blackColor];
         self.tweet.font = [UIFont fontWithName:@"Arial" size:12.0f];
         
-//        self.tweet.numberOfLines = 0;
-//        [self.tweet sizeToFit];
-        
         [self addSubview:self.tweet];
     }
     return self;
